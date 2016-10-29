@@ -11,4 +11,5 @@ matrix:
 
 script:
   # Run a new console app
+  - dotnet restore
   - dotnet test test/Auxo.Core.Unit/
