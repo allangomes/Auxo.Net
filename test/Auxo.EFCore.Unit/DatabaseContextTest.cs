@@ -8,15 +8,10 @@ namespace Auxo.EFCore.Unit
     {
         public DbSet<Customer> Customers { get; set; }
 
-        public DatabaseContextTest()
+        public DatabaseContextTest() : base(new DbContextOptionsBuilder<DatabaseContextTest>()
+            .UseSqlite("Filename=./test.db").Options)
         {
             Database.Migrate();
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Filename=./test.db");
-            base.OnConfiguring(optionsBuilder);
         }
     }
 }

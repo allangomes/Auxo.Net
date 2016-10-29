@@ -1,8 +1,6 @@
 using System;
 using Auxo.Data;
-using Auxo.Services;
-using Auxo.Validation;
-using FluentValidation;
+using Auxo.Unit;
 using Moq;
 using NUnit.Framework;
 

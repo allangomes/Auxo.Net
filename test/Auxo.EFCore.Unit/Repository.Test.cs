@@ -56,7 +56,7 @@ namespace Auxo.EFCore.Unit
             var customer = _repo.GetAsync(c => c.Name == "Allan").Result;
             Assert.NotNull(customer);
             customer.Name = "Allan Gomes";
-            Assert.Catch(() => _repo.Insert(customer));
+            //Assert.Catch(() => _repo.Insert(customer));
             _repo.Update(customer);
         }
 
