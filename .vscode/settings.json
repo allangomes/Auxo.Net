@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    ".DS_Store": "explorerExcludedFiles",
+    "**/bin/": "explorerExcludedFiles",
+    "**/obj/": "explorerExcludedFiles",
+    "project.lock.json": "explorerExcludedFiles",
+    "TestResult.xml": "explorerExcludedFiles"
+  }
+}

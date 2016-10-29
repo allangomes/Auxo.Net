@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "Auxo.Core": "1.0.0",
+    "Microsoft.EntityFrameworkCore.Relational": "1.0.1",
+    "System.Linq.Dynamic.Core": "1.0.6.6"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.1"
+        }
+      },
+      "imports": "dnxcore50"
+    }
+  }
+}
