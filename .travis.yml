@@ -13,3 +13,8 @@ script:
   # Run a new console app
   - dotnet restore
   - dotnet test test/Auxo.Core.Unit/
+  - dotnet test test/Auxo.EFCore.Unit/
+  - dotnet test test/Auxo.Location.Unit/
+  - dotnet test test/Auxo.Messages.Unit/
+  - dotnet test test/Auxo.Services.Unit/
+  - dotnet test test/Auxo.Validation.Unit/
