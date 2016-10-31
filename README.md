@@ -2,6 +2,9 @@
 
 A StrongLoop for Asp.Net Core
 
+
+See more in [Documentation](https://github.com/allangomessl/Auxo.Net/wiki)
+
 ### Depencies
 - [FluentValidation](https://github.com/JeremySkinner/FluentValidation)
 
