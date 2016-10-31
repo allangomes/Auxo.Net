@@ -6,9 +6,8 @@ A StrongLoop for Asp.Net Core
 - [FluentValidation](https://github.com/JeremySkinner/FluentValidation)
 
 
-### Features
 ---
-##### Localization with JSON
+### Localization with JSON
 ```C#
 pt-bt.json
 {
@@ -17,7 +16,7 @@ pt-bt.json
 L.T("hello_world"); //Olá Mundo
 ```
 ---
-##### Security
+### Security
 ```C#
 public class User
 {
@@ -38,12 +37,12 @@ $ user.Password.Hash = "dsadasdas" //ERROR: Private Set Only (Imutable)
 |-----------|----------------------|----------------|------------|
 | PBKDF2    | +WqsZSS2m8iId8QQ.... | fcOMenFOG3y... | 64000      |
 ---
-##### Validation Integrated
+### Validation Integrated
 ```C#
 RuleFor(c => c.Name).NotEmpty().Length(5, 40);
 ```
 ---
-##### Messages
+### Messages
 ```C#
 Message.Raise(new Message("Validation", "Error ao validar Nome"));
 ```
