@@ -14,9 +14,8 @@ script:
   - dotnet restore
   - dotnet test test/Auxo.Core.Unit/
   - dotnet test test/Auxo.EFCore.Unit/
-  - cd test/Auxo.Location.Unit/
+  - cd test/Auxo.Globalization.Unit/
   - dotnet test
   - cd ../../
-  - dotnet test test/Auxo.Messages.Unit/
-  - dotnet test test/Auxo.Services.Unit/
+  - dotnet test test/Auxo.Business.Unit/
   - dotnet test test/Auxo.Validation.Unit/
