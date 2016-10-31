@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using Auxo.Core.Extensions;
+using Auxo.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Auxo.Data

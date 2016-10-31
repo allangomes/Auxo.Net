@@ -1,5 +1,5 @@
 using Auxo.Data;
-using Auxo.Unit;
+using Auxo.Unit.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Auxo.EFCore.Unit

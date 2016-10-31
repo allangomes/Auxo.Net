@@ -1,23 +1,19 @@
 using NUnit.Framework;
 using FluentValidation;
-using Auxo.Core;
-using Auxo.Messages;
-using Auxo.Unit.Core;
+using Auxo.Unit.Models;
+using Auxo.Core.Extensions;
+using Auxo.Unit.IoC;
+using Auxo.Events;
+using Auxo.IoC;
 
 namespace Auxo.Validation.Unit
 {
-    public class Customer
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-    }
-
     public class CustomerValidator : Validator<Customer>
     {
         public CustomerValidator()
         {
             RuleFor(model => model.Name).NotEmpty().Length(5, 100);
-            RuleFor(model => model.Age).InclusiveBetween(18, 150);
+            RuleFor(model => model.BirthDate).InclusiveBetween((-150).Years(), (-18).Years());
         }
     }
 
@@ -30,13 +26,11 @@ namespace Auxo.Validation.Unit
             var validator = new CustomerValidator();
             var customer = new Customer();
 
-            var fakeContainer = new FakeContainer();
-            fakeContainer._instances.Add(typeof(IMessageHandler<Message>), new MessageHandler()); 
-            Locator.Container = fakeContainer;
+            FakeContainer.Create().Add<IHandle<ValidationError>>(new ValidationErrorHandle());
 
             Assert.False(validator.Validate(customer));
-            var messages = Locator.Service<IMessageHandler<Message>>();
-            Assert.True(messages.HasMessages());
+            var handle = Locator.Service<IHandle<ValidationError>>();
+            Assert.True(handle.Any());
         }
     }
 }

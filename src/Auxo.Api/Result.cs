@@ -1,6 +1,4 @@
 using System.Net;
-using Auxo.Core;
-using Auxo.Messages;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Auxo.Api
@@ -9,9 +7,9 @@ namespace Auxo.Api
     {
         public static IActionResult Factory(HttpStatusCode code, object data)
         {
-            var messages = Locator.Service<IMessageHandler<Message>>();
-            if (messages.HasMessages())
-                return new ObjectResult(messages.Messages()) { StatusCode = (int) HttpStatusCode.BadRequest }; 
+            //var messages = Locator.Service<IMessageHandler<Message>>();
+            //if (messages.HasMessages())
+            //   return new ObjectResult(messages.Messages()) { StatusCode = (int) HttpStatusCode.BadRequest }; 
             return new ObjectResult(data) {
                 StatusCode = (int) code
             };

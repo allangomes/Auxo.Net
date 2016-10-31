@@ -2,8 +2,7 @@
   "version": "1.0.0-*",
   "dependencies": {
     "FluentValidation": "6.4.0-beta6",
-    "Auxo.Location": "1.0.0",
-    "Auxo.Messages": "1.0.0"
+    "Auxo.Core": "1.0.0"
   },
   "frameworks": {
     "netcoreapp1.0": {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Auxo.Core.Extensions
+namespace Auxo.Extensions
 {
     public static class DictionaryExtension
     {

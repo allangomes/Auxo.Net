@@ -39,5 +39,7 @@ namespace Auxo.Data
             _set.Remove(model);
             _context.SaveChanges();
         }
+
+        public int Count() => _set.CountAsync().Result;
     }
 }

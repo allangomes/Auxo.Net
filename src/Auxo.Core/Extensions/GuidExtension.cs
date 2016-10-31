@@ -1,6 +1,6 @@
 using System;
 
-namespace Auxo.Core.Extensions
+namespace Auxo.Extensions
 {
     public static class GuidExtension
     {

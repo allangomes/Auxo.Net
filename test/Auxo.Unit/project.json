@@ -2,9 +2,7 @@
   "version": "1.0.0-*",
   "dependencies": {
     "Auxo.Core": "1.0.0",
-    "Auxo.Messages": "1.0.0",
-    "Auxo.Validation": "1.0.0",
-    "Auxo.Services": "1.0.0"
+    "Auxo.Validation": "1.0.0"
   },
   "frameworks": {
     "netcoreapp1.0": {

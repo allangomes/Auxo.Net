@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Auxo.Data
 {
     public class Query<T> : IQuery<T>
+        where T : class
     {
         private IQueryable<T> _query;
 
@@ -24,6 +25,12 @@ namespace Auxo.Data
         public Task<List<TR>> FetchAsync<TR>(Expression<Func<T, TR>> selector)
         {
             return _query.Select(selector).ToListAsync();
+        }
+
+        public IQuery<T> Include<TProp>(Expression<Func<T, TProp>> property)
+        {
+            _query = _query.Include(property);
+            return this;
         }
 
         public IQuery<T> Paginate(int page, int count)

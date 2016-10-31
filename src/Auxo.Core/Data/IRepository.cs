@@ -11,5 +11,6 @@ namespace Auxo.Data
         void Insert(T model);
         void Update(T model);
         void Delete(T model);
+        int Count();
     }
 }
